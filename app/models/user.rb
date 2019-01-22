@@ -1,9 +1,27 @@
 class User < ApplicationRecord
+  has_secure_password
   has_many :messages
-  has_many :chatrooms, through: :messages
-  # validates :username, presence: true, uniqueness: true
-end
+  has_and_belongs_to_many :chatrooms
+  validates :username, uniqueness: { case_sensetive: false}
 
+# need this reader method to take in the table key for passwords which is password_digest
+  def password
+    @password_digest
+  end
+
+  def password=(pass)
+    self.password_digest = BCrypt::Password.create(pass)
+  end
+
+
+
+<<<<<<< HEAD
 # some weird comment
 # git pull origin master it how to pull down changes.
 # Ok Matt we got it to work
+=======
+
+
+
+end
+>>>>>>> user_login
