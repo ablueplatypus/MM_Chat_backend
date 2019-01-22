@@ -3,4 +3,5 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :messages
   # validates :username, presence: true, uniqueness: true
 end
-#testing
+
+# some weird comment
