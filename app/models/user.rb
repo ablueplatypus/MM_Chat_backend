@@ -1,8 +1,6 @@
 class User < ApplicationRecord
+  has_secure_password
   has_many :messages
   has_many :chatrooms, through: :messages
-  # validates :username, presence: true, uniqueness: true
+  validates :name, uniqueness: { case_sensetive: false}
 end
-
-# some weird comment
-# git pull origin master it how to pull down changes.
