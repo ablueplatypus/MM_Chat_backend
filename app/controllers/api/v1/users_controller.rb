@@ -14,7 +14,7 @@ class Api::V1::UsersController < ApplicationController
     else
       render json: { errors: @new_user.errors.full_messages }, status: :unprocessible_entity
     end
-  end
+  end # end of create method
 
 
 end
