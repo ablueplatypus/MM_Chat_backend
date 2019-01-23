@@ -19,6 +19,6 @@ class Api::V1::MessagesController < ApplicationController
   private
 
     def message_params
-      params.require(:message).permit(:content, :chatroom_id)
+
     end
 end
