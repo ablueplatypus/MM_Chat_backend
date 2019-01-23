@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       #routes are plural
     end
   end
+  mount ActionCable.server => '/cable'
+
 end
