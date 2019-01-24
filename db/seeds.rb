@@ -5,3 +5,35 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# User.destroy_all
+# Message.destroy_all
+# Chatroom.destroy_all
+#
+# puts "Creating Users"
+#
+# User.create(username: "Matt", password_digest: "12345abc")
+# User.create(username: "Mahmoud", password_digest: "12345abc")
+# User.create(username: "Joyce", password_digest: "12345abc")
+# User.create(username: "Tony", password_digest: "12345abc")
+# User.create(username: "Rachel", password_digest: "12345abc")
+# User.create(username: "Mike", password_digest: "12345abc")
+#
+# puts "Creating chatroom"
+# Chatroom.create(room_name: "friends chat")
+
+# puts "Creating messages"
+# Message.create(content: "First Message", user_id: 13, chatroom_id: 3)
+# Message.create(content: "wait what?", user_id: 15, chatroom_id: 3)
+# Message.create(content: "who added me to this?", user_id: 18, chatroom_id: 3)
+# Message.create(content: "Hey guys!!!", user_id: 16, chatroom_id: 3)
+# Message.create(content: "wts up?!", user_id: 13, chatroom_id: 3)
+# Message.create(content: "I promise I'll be back", user_id: 17, chatroom_id: 3)
+# Message.create(content: "pending", user_id: 14, chatroom_id: 3)
+
+# puts "users joining chatroom 1"
+# Chatroom.first.users << User.find_by(username: "Matt")
+# Chatroom.first.users << User.find_by(username: "Mahmoud")
+# Chatroom.first.users << User.find_by(username: "Joyce")
+# Chatroom.first.users << User.find_by(username: "Tony")
+# Chatroom.first.users << User.find_by(username: "Rachel")
+# Chatroom.first.users << User.find_by(username: "Mike")
