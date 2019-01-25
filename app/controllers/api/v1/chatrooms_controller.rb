@@ -5,6 +5,11 @@ class Api::V1::ChatroomsController < ApplicationController
     render json: @chatrooms, status: :ok
   end
 
+    def show
+      @chatroomID = Chatroom.find_by(params[:id])
+      render json: @chatroomID, status: :ok
+    end
+
   def create
     @chatroom = Chatroom.create(params[:room_name])
     render json: @chatroom
@@ -23,7 +28,7 @@ class Api::V1::ChatroomsController < ApplicationController
   def add_message
     chatroom = Chatroom.find(params[:chatroom_id])
     user = User.find(params[:user_id])
-    
+
 
   end
 

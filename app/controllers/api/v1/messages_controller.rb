@@ -7,8 +7,8 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def show
-    @id = Message.find_by(message_params[:id])
-    render json: @id, status: :ok
+    @messageid = Message.find_by(params[:id])
+    render json: @messageid, status: :ok
   end
 
   def create

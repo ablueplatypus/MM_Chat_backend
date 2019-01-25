@@ -5,6 +5,12 @@ class Api::V1::UsersController < ApplicationController
     render json: @users, status: :ok
   end
 
+
+  def show
+    @userID = User.find_by(params[:id])
+    render json: @userID, status: :ok
+  end
+
   def create
     my_hash = JSON.parse(received_hash)
     #my hash will be data coming in on the front end to create a user.
