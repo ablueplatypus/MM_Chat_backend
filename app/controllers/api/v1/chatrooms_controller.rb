@@ -11,7 +11,16 @@ class Api::V1::ChatroomsController < ApplicationController
     end
 
   def create
-    @chatroom = Chatroom.create(params[:room_name])
+    usersArray = params[:room_name].split(',')
+    @chatroom = Chatroom.create(room_name: params[:room_name])
+    # allUsers = User.all
+    usersArray.each do |arrayuser|
+      foundUser = User.all.find do |user|
+        user.id == arrayuser.to_i
+      end
+      @chatroom.users << foundUser
+    end
+
     render json: @chatroom
   end
 
