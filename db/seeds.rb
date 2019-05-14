@@ -8,7 +8,7 @@
 # User.destroy_all
 # Message.destroy_all
 # Chatroom.destroy_all
-#
+
 # puts "Creating Users"
 #
 # User.create(username: "Matt", password_digest: "12345abc")
@@ -17,20 +17,20 @@
 # User.create(username: "Tony", password_digest: "12345abc")
 # User.create(username: "Rachel", password_digest: "12345abc")
 # User.create(username: "Mike", password_digest: "12345abc")
+
+puts "Creating chatroom"
+Chatroom.create(room_name: "friends chat")
 #
-# puts "Creating chatroom"
-# Chatroom.create(room_name: "friends chat")
-
 # puts "Creating messages"
-# Message.create(content: "First Message", user_id: 13, chatroom_id: 3)
-# Message.create(content: "wait what?", user_id: 15, chatroom_id: 3)
-# Message.create(content: "who added me to this?", user_id: 18, chatroom_id: 3)
-# Message.create(content: "Hey guys!!!", user_id: 16, chatroom_id: 3)
-# Message.create(content: "wts up?!", user_id: 13, chatroom_id: 3)
-# Message.create(content: "I promise I'll be back", user_id: 17, chatroom_id: 3)
-# Message.create(content: "pending", user_id: 14, chatroom_id: 3)
-
-# puts "users joining chatroom 1"
+# Message.create(content: "First Message", user_id: 5, chatroom_id: 2)
+# Message.create(content: "wait what?", user_id: 4, chatroom_id: 2)
+# Message.create(content: "who added me to this?", user_id: 18, chatroom_id: 2)
+# Message.create(content: "Hey guys!!!", user_id: 7, chatroom_id: 2)
+# Message.create(content: "wts up?!", user_id: 8, chatroom_id: 2)
+# Message.create(content: "I promise I'll be back", user_id: 9, chatroom_id: 2)
+# Message.create(content: "pending", user_id: 10, chatroom_id: 2)
+#
+# puts "users joining chatroom 2"
 # Chatroom.first.users << User.find_by(username: "Matt")
 # Chatroom.first.users << User.find_by(username: "Mahmoud")
 # Chatroom.first.users << User.find_by(username: "Joyce")

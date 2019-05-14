@@ -37,8 +37,6 @@ class Api::V1::ChatroomsController < ApplicationController
   def add_message
     chatroom = Chatroom.find(params[:chatroom_id])
     user = User.find(params[:user_id])
-
-
   end
 
 
